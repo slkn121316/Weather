@@ -23,7 +23,7 @@ def city_location(request):
         else:
                 context = {'error_message': f"Couldn't get weather data for {city}"}
 
-        return render(request, 'home/home1.html', context)
+        return render(request, 'home/home1.html', context=context)
     
     except Exception as e:
         return HttpResponse("<h1>SORRY WE CANNOT FIND YOUR CITY</h1>")
